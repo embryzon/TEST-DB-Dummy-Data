@@ -82,9 +82,8 @@ create table if not exists PDS(
 -- DUMMY VALUES PLEASE edit the values
 -- Insert data into Shift table
 INSERT INTO Shift (Shift_ID, Shift_Start, Shift_End) VALUES
-('S1', '08:00:00', '17:00:00'),
-('S2', '09:00:00', '18:00:00'),
-('S3', '10:00:00', '19:00:00');
+('Day', '07:00:00', '19:00:00'),
+('Night', '19:00:00', '07:00:00');
 
 -- Insert data into Employee table
 INSERT INTO Employee (Employee_ID, Employee_FirstName, Employee_MiddleName, Employee_LastName, Employee_DateOfHire, Employee_ReportsTo) VALUES
