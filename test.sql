@@ -100,10 +100,16 @@ INSERT INTO Employee (Employee_ID, Employee_FirstName, Employee_MiddleName, Empl
 
 -- Insert data into Job table
 INSERT INTO Job (Employee_ID, Employee_Position, Employee_Department, Employee_Status, Employee_Shift) VALUES
-(1, 'Software Engineer', 'IT', 'Active', 'S1'),
-(2, 'HR Specialist', 'Human Resources', 'Active', 'S2'),
-(3, 'Sales Representative', 'Sales', 'Active', 'S3'),
--- Add 7 more employee entries with unique data...
+(1, 'CEO', 'Human Resources', 'Full-time', 'Day')
+(2, 'Project Manager', 'IT', 'Full-time', 'Day'),
+(3, 'Administrative Officer', 'Human Resources', 'Full-time', 'Day'),
+(4, 'Application Developer', 'Development', 'Full-time', 'Night'),
+(5, 'Application Developer', 'Development', 'Full-time', 'Day'),
+(6, 'Maintenance Staff', 'Utility and Maintenance', 'Full-time', 'Day'),
+(7, 'Maintenance Staff', 'Utility and Maintenance', 'Full-time', 'Night'),
+(8, 'Application Developer', 'Development', 'Full-time', 'Night'),
+(9, 'Application Developer', 'Development', 'Full-time', 'Day'),
+(10, 'Application Developer', 'Development', 'Full-time', 'Day');
 
 -- Insert data into Timesheet table
 INSERT INTO Timesheet (Timesheet_ID, Employee_ID, Timesheet_TimeIn, Timesheet_TimeOut) VALUES
