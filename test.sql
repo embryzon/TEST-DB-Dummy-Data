@@ -21,7 +21,7 @@ create table if not exists Employee (
     foreign key (Employee_ReportsTo) references employee (Employee_ID) on update cascade
 );
 
-
+-- TODO
 create table if not exists Job (
     Employee_ID int not null,
     Employee_Position varchar(255) not null,
@@ -46,8 +46,8 @@ create table if not exists Health_Exam (
     HE_ID int not null ,
     Employee_ID int not null,
     HE_Date datetime not null,
-    HE_height decimal(3,2) not null,
-    HE_Weight decimal(3,2) not null,
+    HE_height decimal(5,2) not null,
+    HE_Weight decimal(5,2) not null,
     HE_BloodType varchar(255) not null,
     HE_EyeColor varchar(255) not null,
     HE_DoctorName varchar(255) not null,
@@ -100,7 +100,7 @@ INSERT INTO Employee (Employee_ID, Employee_FirstName, Employee_MiddleName, Empl
 
 -- Insert data into Job table
 INSERT INTO Job (Employee_ID, Employee_Position, Employee_Department, Employee_Status, Employee_Shift) VALUES
-(1, 'CEO', 'Human Resources', 'Full-time', 'Day')
+(1, 'CEO', 'Human Resources', 'Full-time', 'Day'),
 (2, 'Project Manager', 'IT', 'Full-time', 'Day'),
 (3, 'Administrative Officer', 'Human Resources', 'Full-time', 'Day'),
 (4, 'Application Developer', 'Development', 'Full-time', 'Night'),
