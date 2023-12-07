@@ -107,9 +107,9 @@ INSERT INTO Job (Employee_ID, Employee_Position, Employee_Department, Employee_S
 (5, 'Application Developer', 'Development', 'Full-time', 'Day'),
 (6, 'Maintenance Staff', 'Utility and Maintenance', 'Full-time', 'Day'),
 (7, 'Maintenance Staff', 'Utility and Maintenance', 'Full-time', 'Night'),
-(8, 'Application Developer', 'Development', 'Full-time', 'Night'),
-(9, 'Application Developer', 'Development', 'Full-time', 'Day'),
-(10, 'Application Developer', 'Development', 'Full-time', 'Day');
+(8, 'Application Developer', 'Development', 'Trainee', 'Night'),
+(9, 'Application Developer', 'Development', 'Trainee', 'Day'),
+(10, 'Application Developer', 'Development', 'Trainee', 'Day');
 
 -- Insert data into Timesheet table
 INSERT INTO Timesheet (Timesheet_ID, Employee_ID, Timesheet_TimeIn, Timesheet_TimeOut) VALUES
