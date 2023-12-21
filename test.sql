@@ -21,14 +21,15 @@ create table if not exists Employee (
     foreign key (Employee_ReportsTo) references employee (Employee_ID) on update cascade
 );
 
--- TODO
 create table if not exists Job (
+    Job_ID int not null,
+    Job_AcquisitionDate datetime not null,
     Employee_ID int not null,
     Employee_Position varchar(255) not null,
     Employee_Department varchar(255) not null,
     Employee_Status varchar(255) not null,
     Employee_Shift varchar(255) not null,
-    primary key (Employee_ID),
+    primary key (Job_ID),
     foreign key (Employee_ID) references employee (Employee_ID) on update cascade,
     foreign key (Employee_Shift) references shift (Shift_ID) on update cascade
 );
@@ -149,4 +150,3 @@ INSERT INTO PDS (Employee_ID, Employee_Email, Employee_Address, Employee_Contact
 (8, 'olivia.anderson@example.com', '505 Redwood St, Village', '444-555-6666', '1998-02-28', 'Village', 'F', 'Single', 'Italian', 'High School Diploma', 'High School H', 2014, 'PH666666666', 'SSS666666666', 'HDMF666666666', 'Emergency Contact 8', 'Parent', '000-111-2222'),
 (9, 'william.brown@example.com', '606 Cedar St, County', '555-666-7777', '1993-09-14', 'County', 'M', 'Widowed', 'Spanish', 'Ph.D.', 'University I', 2019, 'PH999999999', 'SSS999999999', 'HDMF999999999', 'Emergency Contact 9', 'Sibling', '111-222-3333'),
 (10, 'ava.martin@example.com', '707 Maple St, Hamlet', '666-777-8888', '1995-10-25', 'Hamlet', 'F', 'Divorced', 'Greek', 'Bachelor\'s Degree', 'University J', 2017, 'PH888888888', 'SSS888888888', 'HDMF888888888', 'Emergency Contact 10', 'Friend', '222-333-4444');
-
