@@ -140,13 +140,203 @@ INSERT INTO Health_Exam (HE_ID, Employee_ID, HE_Date, HE_height, HE_Weight, HE_B
 
 -- Insert data into PDS table
 INSERT INTO PDS (Employee_ID, Employee_Email, Employee_Address, Employee_ContactNumber, Employee_DateOfBirth, Employee_PlaceOfBirth, Employee_Sex, Employee_CivilStatus, Employee_Citizenship, Employee_HighestLevelOfEducation, Employee_School, Employee_YearGraduated, Employee_PhilHealthID, Employee_SSSID, Employee_PagIBIGID, Emergency_ContactName, Emergency_ContactRelationship, Emergency_ContactNumber) VALUES
-(1, 'john.doe@example.com', '123 Main St, City', '123-456-7890', '1990-05-15', 'City', 'M', 'Single', 'American', 'Bachelor\'s Degree', 'University A', 2012, 'PH123456789', 'SSS123456789', 'HDMF987654321', 'Emergency Contact 1', 'Friend', '111-222-3333'),
-(2, 'jane.smith@example.com', '456 Oak St, Town', '987-654-3210', '1988-08-22', 'Town', 'F', 'Married', 'Canadian', 'Master\'s Degree', 'University B', 2015, 'PH987654321', 'SSS987654321', 'HDMF123456789', 'Emergency Contact 2', 'Spouse', '444-555-6666'),
-(3, 'robert.johnson@example.com', '789 Pine St, Village', '555-444-3333', '1995-03-10', 'Village', 'M', 'Single', 'British', 'High School Diploma', 'High School C', 2010, 'PH555555555', 'SSS555555555', 'HDMF333333333', 'Emergency Contact 3', 'Parent', '777-888-9999'),
-(4, 'emily.davis@example.com', '101 Maple St, County', '111-222-3333', '1982-07-05', 'County', 'F', 'Widowed', 'Irish', 'Ph.D.', 'University D', 2018, 'PH111111111', 'SSS111111111', 'HDMF111111111', 'Emergency Contact 4', 'Sibling', '222-333-4444'),
-(5, 'michael.williams@example.com', '202 Cedar St, Hamlet', '333-444-5555', '1989-11-12', 'Hamlet', 'M', 'Divorced', 'Australian', 'Bachelor\'s Degree', 'University E', 2013, 'PH333333333', 'SSS333333333', 'HDMF222222222', 'Emergency Contact 5', 'Friend', '555-666-7777'),
-(6, 'sophia.miller@example.com', '303 Elm St, City', '777-888-9999', '1992-06-18', 'City', 'F', 'Single', 'French', 'Master\'s Degree', 'University F', 2016, 'PH777777777', 'SSS777777777', 'HDMF444444444', 'Emergency Contact 6', 'Colleague', '888-999-0000'),
-(7, 'david.taylor@example.com', '404 Birch St, Town', '222-333-4444', '1985-09-22', 'Town', 'M', 'Married', 'German', 'Bachelor\'s Degree', 'University G', 2011, 'PH444444444', 'SSS444444444', 'HDMF555555555', 'Emergency Contact 7', 'Spouse', '999-000-1111'),
-(8, 'olivia.anderson@example.com', '505 Redwood St, Village', '444-555-6666', '1998-02-28', 'Village', 'F', 'Single', 'Italian', 'High School Diploma', 'High School H', 2014, 'PH666666666', 'SSS666666666', 'HDMF666666666', 'Emergency Contact 8', 'Parent', '000-111-2222'),
-(9, 'william.brown@example.com', '606 Cedar St, County', '555-666-7777', '1993-09-14', 'County', 'M', 'Widowed', 'Spanish', 'Ph.D.', 'University I', 2019, 'PH999999999', 'SSS999999999', 'HDMF999999999', 'Emergency Contact 9', 'Sibling', '111-222-3333'),
-(10, 'ava.martin@example.com', '707 Maple St, Hamlet', '666-777-8888', '1995-10-25', 'Hamlet', 'F', 'Divorced', 'Greek', 'Bachelor\'s Degree', 'University J', 2017, 'PH888888888', 'SSS888888888', 'HDMF888888888', 'Emergency Contact 10', 'Friend', '222-333-4444');
+(
+    1, -- Employee ID
+    'john.doe@example.com', -- Employee Email
+    '123 Main St, City', -- Employee Address
+    '123-456-7890', -- Employee Contact Number
+    '1990-05-15', -- Employee Date of Birth
+    'City', -- Employee Place of Birth
+    'M', -- Employee Sex
+    'Single', -- Employee Civil Status
+    'American', -- Employee Citizenship
+    'Bachelor\'s Degree', -- Employee Highest Level of Education
+    'University A', -- Employee School
+    2012, -- Employee Year Graduated
+    'PH123456789', -- Employee PhilHealth ID
+    'SSS123456789', -- Employee SSID
+    'HDMF987654321', -- Employee PagIBIG ID
+    'Emergency Contact 1', -- Emergency Contact Name
+    'Friend', -- Emergency Contact Relationship
+    '111-222-3333' -- Emergency Contact Number
+),
+(
+    2, -- Employee ID
+    'jane.smith@example.com', -- Employee Email
+    '456 Oak St, Town', -- Employee Address
+    '987-654-3210', -- Employee Contact Number
+    '1988-08-22', -- Employee Date of Birth
+    'Town', -- Employee Place of Birth
+    'F', -- Employee Sex
+    'Married', -- Employee Civil Status
+    'Canadian', -- Employee Citizenship
+    'Master\'s Degree', -- Employee Highest Level of Education
+    'University B', -- Employee School
+    2015, -- Employee Year Graduated
+    'PH987654321', -- Employee PhilHealth ID
+    'SSS987654321', -- Employee SSID
+    'HDMF123456789', -- Employee PagIBIG ID
+    'Emergency Contact 2', -- Emergency Contact Name
+    'Spouse', -- Emergency Contact Relationship
+    '444-555-6666' -- Emergency Contact Number
+),
+(
+    3, -- Employee ID
+    'robert.johnson@example.com', -- Employee Email
+    '789 Pine St, Village', -- Employee Address
+    '555-444-3333', -- Employee Contact Number
+    '1995-03-10', -- Employee Date of Birth
+    'Village', -- Employee Place of Birth
+    'M', -- Employee Sex
+    'Single', -- Employee Civil Status
+    'British', -- Employee Citizenship
+    'High School Diploma', -- Employee Highest Level of Education
+    'High School C', -- Employee School
+    2010, -- Employee Year Graduated
+    'PH555555555', -- Employee PhilHealth ID
+    'SSS555555555', -- Employee SSID
+    'HDMF333333333', -- Employee PagIBIG ID
+    'Emergency Contact 3', -- Emergency Contact Name
+    'Parent', -- Emergency Contact Relationship
+    '777-888-9999' -- Emergency Contact Number
+),
+(
+    4, -- Employee ID
+    'emily.davis@example.com', -- Employee Email
+    '101 Maple St, County', -- Employee Address
+    '111-222-3333', -- Employee Contact Number
+    '1982-07-05', -- Employee Date of Birth
+    'County', -- Employee Place of Birth
+    'F', -- Employee Sex
+    'Widowed', -- Employee Civil Status
+    'Irish', -- Employee Citizenship
+    'Ph.D.', -- Employee Highest Level of Education
+    'University D', -- Employee School
+    2018, -- Employee Year Graduated
+    'PH111111111', -- Employee PhilHealth ID
+    'SSS111111111', -- Employee SSID
+    'HDMF111111111', -- Employee PagIBIG ID
+    'Emergency Contact 4', -- Emergency Contact Name
+    'Sibling', -- Emergency Contact Relationship
+    '222-333-4444' -- Emergency Contact Number
+),
+(
+    5, -- Employee ID
+    'michael.williams@example.com', -- Employee Email
+    '202 Cedar St, Hamlet', -- Employee Address
+    '333-444-5555', -- Employee Contact Number
+    '1989-11-12', -- Employee Date of Birth
+    'Hamlet', -- Employee Place of Birth
+    'M', -- Employee Sex
+    'Divorced', -- Employee Civil Status
+    'Australian', -- Employee Citizenship
+    'Bachelor\'s Degree', -- Employee Highest Level of Education
+    'University E', -- Employee School
+    2013, -- Employee Year Graduated
+    'PH333333333', -- Employee PhilHealth ID
+    'SSS333333333', -- Employee SSID
+    'HDMF222222222', -- Employee PagIBIG ID
+    'Emergency Contact 5', -- Emergency Contact Name
+    'Friend', -- Emergency Contact Relationship
+    '555-666-7777' -- Emergency Contact Number
+),
+(
+    6, -- Employee ID
+    'sophia.miller@example.com', -- Employee Email
+    '303 Elm St, City', -- Employee Address
+    '777-888-9999', -- Employee Contact Number
+    '1992-06-18', -- Employee Date of Birth
+    'City', -- Employee Place of Birth
+    'F', -- Employee Sex
+    'Single', -- Employee Civil Status
+    'French', -- Employee Citizenship
+    'Master\'s Degree', -- Employee Highest Level of Education
+    'University F', -- Employee School
+    2016, -- Employee Year Graduated
+    'PH777777777', -- Employee PhilHealth ID
+    'SSS777777777', -- Employee SSID
+    'HDMF444444444', -- Employee PagIBIG ID
+    'Emergency Contact 6', -- Emergency Contact Name
+    'Colleague', -- Emergency Contact Relationship
+    '888-999-0000' -- Emergency Contact Number
+),
+(
+    7, -- Employee ID
+    'david.taylor@example.com', -- Employee Email
+    '404 Birch St, Town', -- Employee Address
+    '222-333-4444', -- Employee Contact Number
+    '1985-09-22', -- Employee Date of Birth
+    'Town', -- Employee Place of Birth
+    'M', -- Employee Sex
+    'Married', -- Employee Civil Status
+    'German', -- Employee Citizenship
+    'Bachelor\'s Degree', -- Employee Highest Level of Education
+    'University G', -- Employee School
+    2011, -- Employee Year Graduated
+    'PH444444444', -- Employee PhilHealth ID
+    'SSS444444444', -- Employee SSID
+    'HDMF555555555', -- Employee PagIBIG ID
+    'Emergency Contact 7', -- Emergency Contact Name
+    'Spouse', -- Emergency Contact Relationship
+    '999-000-1111' -- Emergency Contact Number
+),
+(
+    8, -- Employee ID
+    'olivia.anderson@example.com', -- Employee Email
+    '505 Redwood St, Village', -- Employee Address
+    '444-555-6666', -- Employee Contact Number
+    '1998-02-28', -- Employee Date of Birth
+    'Village', -- Employee Place of Birth
+    'F', -- Employee Sex
+    'Single', -- Employee Civil Status
+    'Italian', -- Employee Citizenship
+    'High School Diploma', -- Employee Highest Level of Education
+    'High School H', -- Employee School
+    2014, -- Employee Year Graduated
+    'PH666666666', -- Employee PhilHealth ID
+    'SSS666666666', -- Employee SSID
+    'HDMF666666666', -- Employee PagIBIG ID
+    'Emergency Contact 8', -- Emergency Contact Name
+    'Parent', -- Emergency Contact Relationship
+    '000-111-2222' -- Emergency Contact Number
+),
+(
+    9, -- Employee ID
+    'william.brown@example.com', -- Employee Email
+    '606 Cedar St, County', -- Employee Address
+    '555-666-7777', -- Employee Contact Number
+    '1993-09-14', -- Employee Date of Birth
+    'County', -- Employee Place of Birth
+    'M', -- Employee Sex
+    'Widowed', -- Employee Civil Status
+    'Spanish', -- Employee Citizenship
+    'Ph.D.', -- Employee Highest Level of Education
+    'University I', -- Employee School
+    2019, -- Employee Year Graduated
+    'PH999999999', -- Employee PhilHealth ID
+    'SSS999999999', -- Employee SSID
+    'HDMF999999999', -- Employee PagIBIG ID
+    'Emergency Contact 9', -- Emergency Contact Name
+    'Sibling', -- Emergency Contact Relationship
+    '111-222-3333' -- Emergency Contact Number
+),
+(
+    10, -- Employee ID
+    'ava.martin@example.com', -- Employee Email
+    '707 Maple St, Hamlet', -- Employee Address
+    '666-777-8888', -- Employee Contact Number
+    '1995-10-25', -- Employee Date of Birth
+    'Hamlet', -- Employee Place of Birth
+    'F', -- Employee Sex
+    'Divorced', -- Employee Civil Status
+    'Greek', -- Employee Citizenship
+    'Bachelor\'s Degree', -- Employee Highest Level of Education
+    'University J', -- Employee School
+    2017, -- Employee Year Graduated
+    'PH888888888', -- Employee PhilHealth ID
+    'SSS888888888', -- Employee SSID
+    'HDMF888888888', -- Employee PagIBIG ID
+    'Emergency Contact 10', -- Emergency Contact Name
+    'Friend', -- Emergency Contact Relationship
+    '222-333-4444' -- Emergency Contact Number
+);
