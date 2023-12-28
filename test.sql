@@ -5,8 +5,8 @@ use cmsc127;
 -- TABLES 
 create table if not exists Shift (
     Shift_ID varchar(255) not null,
-    Shift_Start time not null,
-    Shift_End time not null,
+    Shift_StartTime time not null,
+    Shift_EndTime time not null,
     primary key (Shift_ID)
 );
 
@@ -23,12 +23,12 @@ create table if not exists Employee (
 
 create table if not exists Job (
     Job_ID int not null,
-    Job_AcquisitionDate datetime not null,
-    Employee_ID int not null,
-    Employee_Position varchar(255) not null,
-    Employee_Department varchar(255) not null,
+    Job_AcquisitionDate date not null,
+    Job_Position varchar(255) not null,
+    Job_Department varchar(255) not null,
     Employee_Status varchar(255) not null,
     Employee_Shift varchar(255) not null,
+    Employee_ID int not null,
     primary key (Job_ID),
     foreign key (Employee_ID) references employee (Employee_ID) on update cascade,
     foreign key (Employee_Shift) references shift (Shift_ID) on update cascade
@@ -36,16 +36,15 @@ create table if not exists Job (
 
 create table if not exists Timesheet (
     Timesheet_ID int not null,
-    Employee_ID int not null,
     Timesheet_TimeIn datetime not null,
     Timesheet_TimeOut datetime,
+    Employee_ID int not null,
     primary key (Timesheet_ID),
     foreign key (Employee_ID) references employee (Employee_ID) on update cascade
 );
 
 create table if not exists Health_Exam (
     HE_ID int not null ,
-    Employee_ID int not null,
     HE_Date datetime not null,
     HE_height decimal(5,2) not null,
     HE_Weight decimal(5,2) not null,
@@ -53,6 +52,7 @@ create table if not exists Health_Exam (
     HE_EyeColor varchar(255) not null,
     HE_DoctorName varchar(255) not null,
     HE_Assessment varchar(255) not null,
+    Employee_ID int not null,
     primary key (HE_ID),
     foreign key (Employee_ID) references employee (Employee_ID) on update cascade
 );
@@ -62,7 +62,7 @@ create table if not exists PDS(
     Employee_Email varchar(255) not null,
     Employee_Address varchar(255) not null,
     Employee_ContactNumber varchar(255) not null,
-    Employee_DateOfBirth datetime not null,
+    Employee_DateOfBirth date not null,
     Employee_PlaceOfBirth varchar(255) not null,
     Employee_Sex char(1) not null,
     Employee_CivilStatus varchar(255) not null,
