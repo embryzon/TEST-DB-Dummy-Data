@@ -1,6 +1,6 @@
-create database if not exists cs127;
+create database if not exists NEWcmsc127;
 
-use cs127;
+use NEWcmsc127;
 
 -- TABLES 
 create table if not exists Shift (
@@ -46,7 +46,7 @@ create table if not exists Timesheet (
 create table if not exists Health_Exam (
     HE_ID int not null ,
     HE_Date datetime not null,
-    HE_height decimal(5,2) not null,
+    HE_Height decimal(5,2) not null,
     HE_Weight decimal(5,2) not null,
     HE_BloodType varchar(255) not null,
     HE_EyeColor varchar(255) not null,
