@@ -82,6 +82,10 @@ create table if not exists PDS(
 
 -- DUMMY DATA
 -- New Data
+INSERT INTO Shift (Shift_ID, Shift_Start, Shift_end) VALUES 
+('Day', '07:00:00', '19:00:00'),
+('Night', '19:00:00', '7:00:00');
+
 INSERT INTO Employee (Employee_ID, Employee_FirstName, Employee_MiddleName, Employee_LastName, Employee_DateOfHire, Employee_ReportsTo) VALUES 
 (20160001, 'John', 'Doe', 'Smith', '2016-11-12', NULL),
 (20170004, 'Jane', 'Elizabeth', 'Doe', '2017-09-08', 20160001),
@@ -104,10 +108,49 @@ INSERT INTO Employee (Employee_ID, Employee_FirstName, Employee_MiddleName, Empl
 (20230021, 'Stephanie', 'Santiago', 'Olivarez', '2023 M08 10', 20180004),
 (20190011, 'Jessie', null, 'James', '2019 M06 23', 20180004);
 
-INSERT INTO Shift (Shift_ID, Shift_Start, Shift_end) VALUES 
-('Day', '07:00:00', '19:00:00'),
-('Night', '19:00:00', '7:00:00');
+INSERT INTO Job (Job_ID, Job_AcquisitionDate, Employee_ID, Employee_Position, Employee_Department, Employee_Status, Employee_Shift) VALUES 
+(51200887, '2016-10-28', 20160001, 'CEO', 'HR', 'Full-Time', 'Day'),
+(78423543, '2017-01-01', 20170004, 'Project Manager', 'IT', 'Full-Time', 'Day'),
+(19963104, '2018-08-12', 20180006, 'Administrative Officer', 'HR', 'Full-Time', 'Day'),
+(40863581, '2017-08-31', 20170056, 'Cooperative Head', 'Cooperative', 'Full-Time', 'Night'),
+(68728886, '2018-06-11', 20180025, 'Cooperative Staff', 'Cooperative', 'Full-Time', 'Day'),
+(34317481, '2019-11-23', 20190013, 'Maintenance Head', 'Utility', 'Full-Time', 'Day'),
+(07269592, '2019-12-20', 20190014, 'Maintenance Staff', 'Utility', 'Part-Time', 'Night'),
+(41942484, '2023-03-14', 20230007, 'Application Developer', 'Development', 'Full-Time', 'Night'),
+(19885110, '2023-05-11', 20230012, 'Application Developer', 'Development', 'Full-Time', 'Day'),
+(87123660, '2022-06-03', 20220001, 'Application Developer', 'Development', 'Trainee', 'Day'),
+(82125035, '2023 M02 01', 20170007, 'Bootcamp Manager', 'Bootcamp/ Academy', 'Full-Time', 'Day'),
+(19147215, '2023 M02 04', 20230008, 'Instructor', 'Bootcamp/ Academy', 'Full-Time', 'Day'),
+(21837711, '2023 M02 07', 20230009, 'Instructor', 'Bootcamp/ Academy', 'Full-Time', 'Day'),
+(28967123, '2023 M02 07', 20230010, 'Instructor', 'Bootcamp/ Academy', 'Part-Time', 'Day'),
+(83798636, '2023 M02 09', 20230011, 'Instructor', 'Bootcamp/ Academy', 'Part-Time', 'Night'),
+(53582724, '2016 M04 28', 20160002, 'Marketing Head', 'Marketing and Customer Acquisition', 'Full-Time', 'Day'),
+(26570116, '2016 M01 04', 20160076, 'Marketing Staff', 'Marketing and Customer Acquisition', 'Full-Time', 'Day'),
+(35182732, '2018 M12 01', 20180004, 'SI Head', 'Supplies and Inventory', 'Full-Time', 'Day'),
+(08531970, '2023 M08 10', 20230021, 'SI Staff', 'Supplies and Inventory', 'Part-Time', 'Day'),
+(98895953, '2019 M06 23', 20190011, 'SI Staff', 'Supplies and Inventory', 'Full-Time', 'Day');
 
+INSERT INTO Timesheet (Timesheet_ID, Employee_ID, TimesheetTimeIn, Timesheet_TimeOut) VALUES 
+(361437, 20160001, '2023-11-11 7:00:42', '2023-11-11 7:05:23'),
+(184858, 20170004, '2023-11-11 7:01:23', '2023-11-11 7:06:38'),
+(065026, 20180006, '2023-11-11 7:49:01', '2023-11-11 8:30:04'),
+(015514, 20170056, '2023-11-11 7:02:41', '2023-11-12 7:03:42'),
+(758075, 20180025, '2023-11-12 7:30:32', '2023-11-12 9:10:03'),
+(782880, 20190013, '2023-11-12 7:21:22', '2023-11-12 7:00:56'),
+(088559, 20190014, '2023-11-12 8:02:21', '2023-11-13 8:05:12'),
+(287360, 20230007, '2023-11-12 7:45:21', '2023-11-13 7:30:20'),
+(186356, 20230012, '2023-11-13 8:57:03', '2023-11-13 9:30:32'),
+(530640, 20220001, '2023-11-13 7:45:10', '2023-11-13 7:05:34'),
+(057033, 20170007, '2023-11-13 6:30:21', '2023-11-13 8:10:04'),
+(783279, 20230008, '2023-11-13 7:41:20', '2023-11-13 7:03:41'),
+(857894, 20230009, '2023-11-13 9:00:23', '2023-11-13 9:00:56'),
+(696100, 20230010, '2023-11-13 7:30:21', '2023-11-13 8:20:11'),
+(759973, 20230011, '2023-11-13 6:30:21', '2023-11-14 6:28:21'),
+(881969, 20160002, '2023-11-14 6:58:49', '2023-11-14 5:48:09'),
+(506918, 20160076, '2023-11-14 7:21:20', '2023-11-14 7:57:41'),
+(822945, 20180004, '2023-11-14 9:02:12', '2023-11-14 8:05:21'),
+(209432, 20230021, '2023-11-14 7:01:05', '2023-11-14 7:00:49'),
+(120701, 20190011, '2023-11-14 6:59:03', '2023-11-14 7:01:11');
 -- -- Insert data into Shift table
 -- INSERT INTO Shift (Shift_ID, Shift_Start, Shift_End) VALUES
 -- ('Day', '07:00:00', '19:00:00'),
