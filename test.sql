@@ -82,7 +82,7 @@ create table if not exists PDS(
 
 -- DUMMY DATA
 -- New Data
-INSERT INTO Shift (Shift_ID, Shift_Start, Shift_end) VALUES 
+INSERT INTO Shift (Shift_ID, Shift_StartTime, Shift_EndTime) VALUES 
 ('Day', '07:00:00', '19:00:00'),
 ('Night', '19:00:00', '7:00:00');
 
@@ -108,7 +108,7 @@ INSERT INTO Employee (Employee_ID, Employee_FirstName, Employee_MiddleName, Empl
 (20230021, 'Stephanie', 'Santiago', 'Olivarez', '2023 M08 10', 20180004),
 (20190011, 'Jessie', null, 'James', '2019 M06 23', 20180004);
 
-INSERT INTO Job (Job_ID, Job_AcquisitionDate, Employee_ID, Employee_Position, Employee_Department, Employee_Status, Employee_Shift) VALUES 
+INSERT INTO Job (Job_ID, Job_AcquisitionDate, Employee_ID, Job_Position, Job_Department, Employee_Status, Employee_Shift) VALUES 
 (51200887, '2016-10-28', 20160001, 'CEO', 'HR', 'Full-Time', 'Day'),
 (78423543, '2017-01-01', 20170004, 'Project Manager', 'IT', 'Full-Time', 'Day'),
 (19963104, '2018-08-12', 20180006, 'Administrative Officer', 'HR', 'Full-Time', 'Day'),
@@ -130,7 +130,7 @@ INSERT INTO Job (Job_ID, Job_AcquisitionDate, Employee_ID, Employee_Position, Em
 (08531970, '2023 M08 10', 20230021, 'SI Staff', 'Supplies and Inventory', 'Part-Time', 'Day'),
 (98895953, '2019 M06 23', 20190011, 'SI Staff', 'Supplies and Inventory', 'Full-Time', 'Day');
 
-INSERT INTO Timesheet (Timesheet_ID, Employee_ID, TimesheetTimeIn, Timesheet_TimeOut) VALUES 
+INSERT INTO Timesheet (Timesheet_ID, Employee_ID, Timesheet_TimeIn, Timesheet_TimeOut) VALUES 
 (361437, 20160001, '2023-11-11 7:00:42', '2023-11-11 7:05:23'),
 (184858, 20170004, '2023-11-11 7:01:23', '2023-11-11 7:06:38'),
 (065026, 20180006, '2023-11-11 7:49:01', '2023-11-11 8:30:04'),
@@ -152,7 +152,7 @@ INSERT INTO Timesheet (Timesheet_ID, Employee_ID, TimesheetTimeIn, Timesheet_Tim
 (209432, 20230021, '2023-11-14 7:01:05', '2023-11-14 7:00:49'),
 (120701, 20190011, '2023-11-14 6:59:03', '2023-11-14 7:01:11');
 
-INSERT INTO Health_Exam (HE_ID, HE_Date, HE_Height, HE_Weight, HE_BloodType, HE_EyeColor, HE_DoctorName, E_Assessment, Employee_ID) VALUES 
+INSERT INTO Health_Exam (HE_ID, HE_Date, HE_Height, HE_Weight, HE_BloodType, HE_EyeColor, HE_DoctorName, HE_Assessment, Employee_ID) VALUES 
 (66155257, '20160001', '2023-11-10 8:00:00', '170.5', '70.2', 'AB-', 'Black', 'Dr. Smith', 'Fit for work'),
 (28033234, '20170004', '2023-11-11 12:22:00', '165.7', '55.8', 'A', 'Brown', 'Dr. Smith', 'Fit for work'),
 (79530768, '20180006', '2023-11-12 8:00:00', '170.5', '75.5', 'A+', 'Black', 'Dr. Smith', 'Fit for work'),
@@ -173,6 +173,29 @@ INSERT INTO Health_Exam (HE_ID, HE_Date, HE_Height, HE_Weight, HE_BloodType, HE_
 (76493520, '20180004', '2023-12-26 8:03:00', '145.3', '58.2', 'B-', 'Black', 'Dr. Smith', 'Fit for work'),
 (69876162, '20230021', '2023-12-27 8:35:00', '152.3', '60.1', 'AB', 'Black', 'Dr. Smith', 'Fit for work'),
 (41057364, '20190011', '2023-12-28 7:52:00', '149.9', '57.3', 'A+', 'Black', 'Dr. Smith', 'Fit for work');
+
+INSERT INTO PDS (Employee_ID, Employee_Email, Employee_Address, Employee_ContactNumber, Employee_DateOfBirth, Employee_PlaceOfBirth, Employee_Sex, Employee_CivilStatus, Employee_Citizenship, Employee_HighestLevelOfEducation, Employee_School, Employee_YearGraduated, Employee_PhilHealthID, Employee_SSSID, Employee_PagIBIGID, Emergency_ContactName, Emergency_ContactRelationship, Emergency_ContactNumber) VALUES 
+(20160001, 'jdsmith@onetwentyseven.com', '23 Main St, City', '+63 985 976-9095', '1984-04-25', 'Pasig City', 'M', 'Single', 'Filipino', 'PhD', 'UP Diliman', '2012', '87-13783541-5', '1753-1472439-5', '5530-0167-8967', 'Jeremy Smith', 'Brother', '+63 960 660-8866'),
+(20170004, 'jedoe@onetwentyseven.com', '456 Oak St, Town', '+63 907 843-3035', '1991-09-13', 'Imus', 'F', 'Single', 'Filipino', 'Bachelor's Degree', 'UST', '2015', '48-18993821-6', '3497-7004892-0', '0829-4400-3402', 'Job Doe', 'Father', '+63 943 736-3440'),
+(20180006, 'rajohnson@onetwentyseven.com', '789 Pine St, Village', '+63 993 563-4702', '1989-10-04', 'Manila', 'M', 'Single', 'Chinese', 'PhD', 'UP Baguio', '2017', '88-37805240-8', '4999-1852156-1', '5434-5851-0731', 'John Johnson', 'Father', '+63 900 491-2356'),
+(20170056, 'edavis@onetwentyseven.com', '101 Maple St, County', '+63 903 245-2877', '1988-12-23', 'Calamba', 'F', 'Single', 'American', 'PhD', 'FEU', '2016', '03-99815859-1', '7522-3674751-3', '5919-9282-7638', 'Dean Davis', 'Grandfather', '+63 928 667-5170'),
+(20180025, 'mdwilliams@onetwentyseven.com', '202 Cedar St, Hamlet', '+63 983 366-5205', '1991-03-14', 'Tokyo', 'M', 'Single', 'Irish', 'Master's Degree', 'ADMU', '2017', '75-99919902-3', '7930-0373421-7', '8948-7068-0867', 'Jodie Williams', 'Sister', '+63 946 912-7299'),
+(20190013, 'smiller@onetwentyseven.com', '303 Elm St, City', '+63 931 287-0774', '1993-02-14', 'Hanoi', 'F', 'Single', 'Vietnamese', 'Bachelor's Degree', 'UP Diliman', '2017', '28-23685543-2', '7703-0530905-8', '4852-7172-1591', 'Jessica Miller', 'Cousin', '+63 921 177-8728'),
+(20190014, 'detaylor@onetwentyseven.com', '404 Birch St, Town', '+63 903 551-2806', '1996-01-01', 'Baguio', 'M', 'Single', 'Filipino', 'Bachelor's Degree', 'SLU', '2020', '53-93863889-8', '6616-3258394-2', '3876-7691-8254', 'Swift Taylor', 'Mother', '+63 935 045-4634'),
+(20230007, 'oanderson@onetwentyseven.com', '505 Redwood St, Village', '+63 999 242-4491', '1995-05-06', 'Davao', 'F', 'Single', 'Belgian', 'Bachelor's Degree', 'Stanford', '2019', '86-35338081-2', '3949-2947932-9', '7352-3109-9992', 'Keanu Anderson', 'Brother', '+63 921 224-9439'),
+(20230012, 'wfbrown@onetwentyseven.com', '606 Cedar St, County', '+63 913 926-0726', '1994-02-01', 'Los Baños', 'M', 'Single', 'Indian', 'Bachelor's Degree', 'NU', '2018', '75-52833211-1', '4643-4193613-4', '4246-0252-5606', 'Blue Brown', 'Sister', '+63 964 559-1880'),
+(20220001, 'amartin@onetwentyseven.com', '707 Maple St, Hamlet', '+63 912 736-3254', '1993-11-27', 'La Trinidad', 'F', 'Single', 'Filipino', 'PhD', 'ADMU', '2021', '80-50010748-0', '2970-2352953-4', '2496-5669-4541', 'Jeorg Martin', 'Father', '+63 961 170-7253'),
+(20170007, 'ithompson@onetwentyseven.com', '808 Roxas Boulevard', '+63 978 724-8109', '1982-5-18 12:00:00 AM', 'Pasay City', 'M', 'Married', 'American', 'Master's Degree', 'MIT', '2008', '51-98521420-4', '0483-4863872-9', '4681-4777-3482', 'Jessica Thompson', 'Wife', '+63 949 392-2631'),
+(20230008, 'ersanchez@onetwentyseven.com', '909 Ayala Avenue', '+63 902 619-3123', '1985-8-30 12:00:00 AM', 'Makati', 'F', 'Married', 'Filipino', 'Master's Degree', 'UP Baguio', '2011', '82-36879434-7', '6329-8045019-8', '9250-5540-2887', 'Eric Sanchez', 'Husband', '+63 976 302-1002'),
+(20230009, 'lmramirez@onetwentyseven.com', '101 Katipunan Avenue', '+63 924 285-3070', '1994-11-2 12:00:00 AM', 'Quezon City', 'M', 'Single', 'Filipino', 'Master's Degree', 'UP Baguio', '2020', '46-78207238-8', '7144-0612658-7', '7873-9393-1886', 'Liza Ramirez', 'Sister', '+63 913 910-2166'),
+(20230010, 'gcruz@onetwentyseven.com', '202 Shaw Boulevard', '+63 929 155-3323', '1999-3-25 12:00:00 AM', 'Mandaluyong', 'F', 'Single', 'Filipino', 'Bachelor's Degree', 'UP Diliman', '2023', '30-55002409-4', '4638-3480580-3', '6171-7544-1977', 'George Cruz', 'Father', '+63 915 785-5653'),
+(20230011, 'emartinez@onetwentyseven.com', '303 McKinley Parkway', '+63 908 221-1266', '1998-7-12 12:00:00 AM', 'Taguig', 'M', 'Single', 'Filipino', 'Bachelor's Degree', 'UC', '2022', '24-71579831-5', '9749-9151321-1', '4756-8117-7666', 'Emily Martinez', 'Mother', '+63 941 279-0420'),
+(20160002, 'hcsalamanca@onetwentyseven.com', '105 Roxas Boulevard', '+63 902 518-9958', '1993-2-5 12:00:00 AM', 'Parañaque', 'M', 'Single', 'Filipino', 'PhD', 'UP Diliman', '2021', '68-28369812-5', '1560-3855001-5', '4206-2798-4551', 'Zala Salamanca', 'Mother', '+63 996 902-6932'),
+(20160076, 'bwalter@onetwentyseven.com', '108 Kayang St.', '+63 948 143-0723', '1992-4-12 12:00:00 AM', 'Benguet', 'M', 'Single', 'Filipino', 'Bachelor's Degree', 'SLU', '2016', '65-19225342-7', '4443-1542045-9', '3509-1558-4100', 'Dale Walter', 'Brother', '+63 921 419-5467'),
+(20180004, 'magrace@onetwentyseven.com', '28 Engineers Hill, Baguio', '+63 987 762-5118', '1993-5-21 12:00:00 AM', 'La Trinidad', 'F', 'Single', 'American', 'Master's Degree', 'UP Baguio', '2019', '75-37343526-9', '9728-2993538-8', '6165-0275-7829', 'Love Peace', 'Friend', '+63 924 165-6498'),
+(20230021, 'ssolivarez@onetwentyseven.com', '158 Military Cut Off, Baguio', '+63 993 159-0556', '1998-9-30 12:00:00 AM', 'La Trinidad', 'F', 'Single', 'Filipino', 'Bachelor's Degree', 'UC', '2022', '27-61273908-0', '2255-7477071-7', '1841-2229-2751', 'Melanie Olivarez', 'Sister', '+63 962 038-0160'),
+(20190011, 'jjames@onetwentyseven.com', 'Purok 12, Irisan', '+63 912 052-6469', '1997-2-21 12:00:00 AM', 'Benguet', 'F', 'Single', 'Filipino', 'Bachelor's Degree', 'UB ', '2021', '95-16029780-3', '1037-3212863-0', '5376-7473-5950', 'James Chord', 'Brother', '+63 912 226-9381');
+
 -- Insert data into Shift table
 -- INSERT INTO Shift (Shift_ID, Shift_Start, Shift_End) VALUES
 -- ('Day', '07:00:00', '19:00:00'),
