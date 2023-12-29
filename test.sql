@@ -1,6 +1,6 @@
-create database if not exists NEWcmsc127;
+create database if not exists cmsc127;
 
-use NEWcmsc127;
+use cmsc127;
 
 -- TABLES 
 create table if not exists Shift (
