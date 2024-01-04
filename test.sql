@@ -18,7 +18,7 @@ create table if not exists Employee (
     Employee_DateOfHire date,
     Employee_ReportsTo int,
     primary key (Employee_ID),
-    foreign key (Employee_ReportsTo) references employee (Employee_ID) on update cascade
+    foreign key (Employee_ReportsTo) references employee (Employee_ID) on update cascade on delete set null
 );
 
 create table if not exists Job (
@@ -30,7 +30,7 @@ create table if not exists Job (
     Employee_Shift varchar(255) not null,
     Employee_ID int not null,
     primary key (Job_ID),
-    foreign key (Employee_ID) references employee (Employee_ID) on update cascade,
+    foreign key (Employee_ID) references employee (Employee_ID) on update cascade on delete cascade,
     foreign key (Employee_Shift) references shift (Shift_ID) on update cascade
 );
 
@@ -40,7 +40,7 @@ create table if not exists Timesheet (
     Timesheet_TimeOut datetime,
     Employee_ID int not null,
     primary key (Timesheet_ID),
-    foreign key (Employee_ID) references employee (Employee_ID) on update cascade
+    foreign key (Employee_ID) references employee (Employee_ID) on update cascade on delete cascade
 );
 
 create table if not exists Health_Exam (
@@ -54,7 +54,7 @@ create table if not exists Health_Exam (
     HE_Assessment varchar(255) not null,
     Employee_ID int not null,
     primary key (HE_ID),
-    foreign key (Employee_ID) references employee (Employee_ID) on update cascade
+    foreign key (Employee_ID) references employee (Employee_ID) on update cascade on delete cascade
 );
 
 create table if not exists PDS(
@@ -77,7 +77,7 @@ create table if not exists PDS(
     Emergency_ContactRelationship varchar(255) not null,
     Emergency_ContactNumber varchar(255) not null,
     primary key (Employee_ID),
-    foreign key (Employee_ID) references employee (Employee_ID) on update cascade
+    foreign key (Employee_ID) references employee (Employee_ID) on update cascade on delete cascade
 );
 
 INSERT INTO Shift (Shift_ID, Shift_StartTime, Shift_EndTime) VALUES 
