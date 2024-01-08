@@ -117,16 +117,16 @@ INSERT INTO Job (Job_ID, Job_AcquisitionDate, Employee_ID, Job_Position, Job_Dep
 (41942484, '2023-03-14', 20230007, 'Application Developer', 'Development', 'Full-Time', 'Night'),
 (19885110, '2023-05-11', 20230012, 'Application Developer', 'Development', 'Full-Time', 'Day'),
 (87123660, '2022-06-03', 20220001, 'Application Developer', 'Development', 'Trainee', 'Day'),
-(82125035, '2023 M02 01', 20170007, 'Bootcamp Manager', 'Bootcamp/ Academy', 'Full-Time', 'Day'),
-(19147215, '2023 M02 04', 20230008, 'Instructor', 'Bootcamp/ Academy', 'Full-Time', 'Day'),
-(21837711, '2023 M02 07', 20230009, 'Instructor', 'Bootcamp/ Academy', 'Full-Time', 'Day'),
-(28967123, '2023 M02 07', 20230010, 'Instructor', 'Bootcamp/ Academy', 'Part-Time', 'Day'),
-(83798636, '2023 M02 09', 20230011, 'Instructor', 'Bootcamp/ Academy', 'Part-Time', 'Night'),
-(53582724, '2016 M04 28', 20160002, 'Marketing Head', 'Marketing and Customer Acquisition', 'Full-Time', 'Day'),
-(26570116, '2016 M01 04', 20160076, 'Marketing Staff', 'Marketing and Customer Acquisition', 'Full-Time', 'Day'),
-(35182732, '2018 M12 01', 20180004, 'SI Head', 'Supplies and Inventory', 'Full-Time', 'Day'),
-(54201129, '2023 M08 10', 20230021, 'SI Staff', 'Supplies and Inventory', 'Part-Time', 'Day'),
-(98895953, '2019 M06 23', 20190011, 'SI Staff', 'Supplies and Inventory', 'Full-Time', 'Day');
+(82125035, '2023-02-01', 20170007, 'Bootcamp Manager', 'Bootcamp/ Academy', 'Full-Time', 'Day'),
+(19147215, '2023-02-04', 20230008, 'Instructor', 'Bootcamp/ Academy', 'Full-Time', 'Day'),
+(21837711, '2023-02-07', 20230009, 'Instructor', 'Bootcamp/ Academy', 'Full-Time', 'Day'),
+(28967123, '2023-02-07', 20230010, 'Instructor', 'Bootcamp/ Academy', 'Part-Time', 'Day'),
+(83798636, '2023-02-09', 20230011, 'Instructor', 'Bootcamp/ Academy', 'Part-Time', 'Night'),
+(53582724, '2016-04-28', 20160002, 'Marketing Head', 'Marketing and Customer Acquisition', 'Full-Time', 'Day'),
+(26570116, '2016-01-04', 20160076, 'Marketing Staff', 'Marketing and Customer Acquisition', 'Full-Time', 'Day'),
+(35182732, '2018-12-01', 20180004, 'SI Head', 'Supplies and Inventory', 'Full-Time', 'Day'),
+(54201129, '2023-08-10', 20230021, 'SI Staff', 'Supplies and Inventory', 'Part-Time', 'Day'),
+(98895953, '2019-06-23', 20190011, 'SI Staff', 'Supplies and Inventory', 'Full-Time', 'Day');
 
 INSERT INTO Health_Exam (HE_ID, Employee_ID, HE_Date, HE_Height, HE_Weight, HE_BloodType, HE_EyeColor, HE_DoctorName, HE_Assessment) VALUES 
 (66155257, 20160001, '2023-11-10 08:00:00', '170.5', '70.2', 'AB-', 'Black', 'Dr. Smith', 'Fit for work'),
